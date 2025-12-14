@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Shop - Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-running"></i> Sneaker Shop</h1>
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a>
+                    <a href="catalog.html"><i class="fas fa-shopping-bag"></i> Каталог</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span id="cart-count" class="badge"></span></a>
+                    <a href="orders.html"><i class="fas fa-receipt"></i> Заказы</a>
+                    <a href="admin.html" id="admin-link" style="display:none"><i class="fas fa-user-shield"></i> Админка</a>
+                </div>
+                <div class="auth-buttons">
+                    <div id="user-info" class="user-info"></div>
+                    <button id="logout-btn" class="btn btn-secondary" style="display:none">
+                        <i class="fas fa-sign-out-alt"></i> Выйти
+                    </button>
+                    <button id="login-btn" class="btn">
+                        <i class="fas fa-sign-in-alt"></i> Войти
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Беги к стилю, беги к удобству!</h2>
+                    <p class="hero-subtitle">Более 150 моделей кроссовок на любой вкус и размер. От классики до ультрасовременных технологий.</p>
+                    <a href="catalog.html" class="btn btn-large pulse">
+                        <i class="fas fa-arrow-right"></i> Перейти к покупкам
+                    </a>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast fa-3x"></i>
+                    </div>
+                    <h3>🚚 Быстрая доставка</h3>
+                    <p>Доставка за 24 часа по городу. Бесплатная доставка для заказов от 5000₽</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                    </div>
+                    <h3>✅ Гарантия качества</h3>
+                    <p>Все товары сертифицированы и проходят многоуровневую проверку</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments fa-3x"></i>
+                    </div>
+                    <h3>💬 Отзывы покупателей</h3>
+                    <p>Более 1000 довольных клиентов и реальные отзывы о каждой модели</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo fa-3x"></i>
+                    </div>
+                    <h3>↩️ Легкий возврат</h3>
+                    <p>Возврат в течение 30 дней без объяснения причин</p>
+                </div>
+            </section>
+
+            <section class="stats">
+                <h2><i class="fas fa-chart-line"></i> Статистика магазина</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-sneakers">0</span>
+                        <span class="stat-label">Моделей в каталоге</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-stock">0</span>
+                        <span class="stat-label">Пар в наличии</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="avg-price">0</span>
+                        <span class="stat-label">Средняя цена</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="sizes-range">36-45</span>
+                        <span class="stat-label">Диапазон размеров</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter">
+                <h3><i class="fas fa-envelope"></i> Подпишитесь на рассылку</h3>
+                <p>Получайте первыми информацию о новых поступлениях и специальных предложениях</p>
+                <div class="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Ваш email">
+                    <button class="btn"><i class="fas fa-paper-plane"></i> Подписаться</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sneaker Shop</h4>
+                    <p>Лучшие кроссовки для вашего комфорта и стиля</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@sneakershop.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-telegram fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2024 Sneaker Shop. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification" style="display:none"></div>
+
+    <script src="app.js"></script>
+    <script>
+        async function loadStats() {
+            try {
+                const response = await fetch('http://localhost:5000/api/sneakers');
+                if (response.ok) {
+                    const sneakers = await response.json();
+                    
+                    document.getElementById('total-sneakers').textContent = sneakers.length;
+                    
+                    const totalStock = sneakers.reduce((sum, s) => sum + s.stock, 0);
+                    document.getElementById('total-stock').textContent = totalStock;
+                    
+                    const avgPrice = sneakers.reduce((sum, s) => sum + s.price, 0) / sneakers.length;
+                    document.getElementById('avg-price').textContent = avgPrice.toFixed(2) + '₽';
+                    
+                    animateCounter('total-sneakers', sneakers.length);
+                    animateCounter('total-stock', totalStock);
+                }
+            } catch (error) {
+                console.error('Ошибка загрузки статистики:', error);
+            }
+        }
+
+        function animateCounter(elementId, finalValue) {
+            const element = document.getElementById(elementId);
+            let current = 0;
+            const increment = finalValue / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= finalValue) {
+                    current = finalValue;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 20);
+        }
+        document.querySelector('.newsletter-form button').addEventListener('click', () => {
+            const email = document.getElementById('newsletter-email').value;
+            if (email && email.includes('@')) {
+                showNotification('Спасибо за подписку!', 'success');
+                document.getElementById('newsletter-email').value = '';
+            } else {
+                showNotification('Введите корректный email', 'error');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadStats();
+            checkAuth();
+            updateCartCount();
+            document.querySelectorAll('.social-icons a').forEach(icon => {
+                icon.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                icon.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
