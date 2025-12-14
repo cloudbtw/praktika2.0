@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Shop - Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Дополнительные стили для страницы регистрации */
+        .password-input {
+            position: relative;
+        }
+        
+        .show-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 2;
+        }
+        
+        .password-strength {
+            margin-top: 8px;
+        }
+        
+        .strength-bar {
+            height: 6px;
+            background: #eee;
+            border-radius: 3px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        
+        #strength-meter {
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .form-hint {
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        #password-match {
+            font-weight: bold;
+        }
+        
+        .auth-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 900px) {
+            .auth-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .auth-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .auth-header h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .auth-header p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+        
+        .auth-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .auth-form .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        
+        .terms {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .terms-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .terms-link:hover {
+            text-decoration: underline;
+        }
+        
+        .btn-auth {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-auth:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(52, 152, 219, 0.2);
+        }
+        
+        .btn-auth:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .auth-footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .auth-footer a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .auth-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .benefits-list li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #2c3e50;
+        }
+        
+        .benefits-list li i {
+            color: #2ecc71;
+        }
+        
+        .bonus-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        
+        .bonus-icon {
+            background: rgba(255, 255, 255, 0.2);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .progress-steps .steps {
+            margin-top: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            opacity: 0.6;
+        }
+        
+        .step.active {
+            opacity: 1;
+        }
+        
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+        }
+        
+        .step.active .step-number {
+            background: #3498db;
+            color: white;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            z-index: 1002;
+            animation: slideInRight 0.3s, fadeOut 0.3s 2.7s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .notification.success {
+            background: #2ecc71;
+        }
+        
+        .notification.error {
+            background: #e74c3c;
+        }
+        
+        .notification.info {
+            background: #3498db;
+        }
+        
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-running"></i> Sneaker Shop</h1>
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+                    <a href="catalog.html"><i class="fas fa-shopping-bag"></i> Каталог</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a>
+                </div>
+                <div class="auth-buttons">
+                    <button onclick="window.location.href='login.html'" class="btn">
+                        <i class="fas fa-sign-in-alt"></i> Войти
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h2><i class="fas fa-user-plus"></i> Регистрация</h2>
+                        <p>Создайте аккаунт для удобных покупок</p>
+                    </div>
+                    
+                    <form id="register-form" class="auth-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reg-username"><i class="fas fa-user"></i> Логин *</label>
+                                <input type="text" id="reg-username" placeholder="Придумайте логин" required>
+                                <small class="form-hint">От 3 до 20 символов</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reg-email"><i class="fas fa-envelope"></i> Email *</label>
+                                <input type="email" id="reg-email" placeholder="example@mail.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reg-password"><i class="fas fa-lock"></i> Пароль *</label>
+                                <div class="password-input">
+                                    <input type="password" id="reg-password" placeholder="Создайте пароль" required>
+                                    <button type="button" class="show-password" onclick="togglePassword('reg-password')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength">
+                                    <span id="strength-text">Сложность пароля</span>
+                                    <div class="strength-bar">
+                                        <div id="strength-meter"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reg-confirm"><i class="fas fa-lock"></i> Подтверждение *</label>
+                                <div class="password-input">
+                                    <input type="password" id="reg-confirm" placeholder="Повторите пароль" required>
+                                    <button type="button" class="show-password" onclick="togglePassword('reg-confirm')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <small id="password-match" class="form-hint"></small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reg-phone"><i class="fas fa-phone"></i> Телефон</label>
+                            <input type="tel" id="reg-phone" placeholder="+7 (999) 123-45-67">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reg-role"><i class="fas fa-user-tag"></i> Роль</label>
+                            <select id="reg-role">
+                                <option value="Buyer">Покупатель</option>
+                                <option value="Worker">Сотрудник</option>
+                                <option value="Director">Директор</option>
+                            </select>
+                            <small class="form-hint">Выберите "Покупатель" если регистрируетесь для покупок</small>
+                        </div>
+                        
+                        <div class="form-group terms">
+                            <label class="checkbox">
+                                <input type="checkbox" id="terms" required>
+                                <span>Я согласен с <a href="#" class="terms-link" onclick="event.preventDefault(); showNotification('Страница с правилами в разработке', 'info')">правилами использования</a> и <a href="#" class="terms-link" onclick="event.preventDefault(); showNotification('Страница с политикой в разработке', 'info')">политикой конфиденциальности</a></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" id="newsletter" checked>
+                                <span>Получать новости и специальные предложения</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-auth">
+                            <i class="fas fa-user-plus"></i> Зарегистрироваться
+                        </button>
+                        
+                        <div class="auth-footer">
+                            <p>Уже есть аккаунт? <a href="login.html">Войдите</a></p>
+                            <p><a href="index.html"><i class="fas fa-arrow-left"></i> Вернуться на главную</a></p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="auth-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-gift"></i> Бонус за регистрацию!</h3>
+                        <div class="bonus-card">
+                            <div class="bonus-icon">
+                                <i class="fas fa-percentage fa-3x"></i>
+                            </div>
+                            <div class="bonus-content">
+                                <h4>10% скидка</h4>
+                                <p>На первую покупку после регистрации</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check-circle"></i> Приветственный бонус</li>
+                            <li><i class="fas fa-check-circle"></i> Накапливаемые баллы</li>
+                            <li><i class="fas fa-check-circle"></i> Персональные скидки</li>
+                            <li><i class="fas fa-check-circle"></i> Приоритетная поддержка</li>
+                            <li><i class="fas fa-check-circle"></i> Доступ к эксклюзивам</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="progress-steps">
+                        <h4><i class="fas fa-list-ol"></i> Этапы регистрации</h4>
+                        <div class="steps">
+                            <div class="step active">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Заполнение данных</h5>
+                                    <p>Введите вашу информацию</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Подтверждение email</h5>
+                                    <p>Проверьте вашу почту</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Готово!</h5>
+                                    <p>Начинайте покупки</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="test-accounts">
+                        <h4><i class="fas fa-user-secret"></i> Тестовые аккаунты</h4>
+                        <div class="account-card" style="background: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 14px;">
+                            <p><strong>Директор:</strong> director / dirpass</p>
+                            <p><strong>Работник:</strong> worker / workpass</p>
+                            <p><strong>Покупатель:</strong> buyer / buy1</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Гарантии</h4>
+                    <p><i class="fas fa-shield-alt"></i> Безопасность данных</p>
+                    <p><i class="fas fa-user-check"></i> Подтверждение аккаунта</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Помощь</h4>
+                    <p><i class="fas fa-question-circle"></i> Частые вопросы</p>
+                    <p><i class="fas fa-comments"></i> Онлайн-консультант</p>
+                </div>
+            </div>
+            <p class="copyright">© 2024 Sneaker Shop. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <!-- Уведомления -->
+    <div id="notification" class="notification" style="display:none"></div>
+
+    <script>
+        // Функция для отображения уведомлений
+        function showNotification(message, type = 'info') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.style.display = 'block';
+            
+            // Автоматическое скрытие через 3 секунды
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // Переключение видимости пароля
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const button = input.parentElement.querySelector('.show-password');
+            const icon = button.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.className = 'fas fa-eye-slash';
+            } else {
+                input.type = 'password';
+                icon.className = 'fas fa-eye';
+            }
+        }
+
+        // Проверка сложности пароля
+        document.getElementById('reg-password').addEventListener('input', function() {
+            const password = this.value;
+            const meter = document.getElementById('strength-meter');
+            const text = document.getElementById('strength-text');
+            
+            let strength = 0;
+            let color = '#e74c3c';
+            let message = 'Слабый';
+            
+            // Проверка длины
+            if (password.length >= 8) strength += 25;
+            // Проверка на заглавные буквы
+            if (/[A-Z]/.test(password)) strength += 25;
+            // Проверка на цифры
+            if (/[0-9]/.test(password)) strength += 25;
+            // Проверка на специальные символы
+            if (/[^A-Za-z0-9]/.test(password)) strength += 25;
+            
+            if (strength >= 75) {
+                color = '#2ecc71';
+                message = 'Сильный';
+            } else if (strength >= 50) {
+                color = '#f39c12';
+                message = 'Средний';
+            } else if (password.length > 0) {
+                color = '#e74c3c';
+                message = 'Слабый';
+            } else {
+                color = '#ddd';
+                message = 'Введите пароль';
+            }
+            
+            meter.style.width = strength + '%';
+            meter.style.background = color;
+            text.textContent = message;
+            text.style.color = color;
+        });
+
+        // Проверка совпадения паролей
+        document.getElementById('reg-confirm').addEventListener('input', function() {
+            const password = document.getElementById('reg-password').value;
+            const confirm = this.value;
+            const hint = document.getElementById('password-match');
+            
+            if (confirm.length === 0) {
+                hint.textContent = '';
+                hint.style.color = '';
+            } else if (password === confirm) {
+                hint.textContent = '✓ Пароли совпадают';
+                hint.style.color = '#2ecc71';
+            } else {
+                hint.textContent = '✗ Пароли не совпадают';
+                hint.style.color = '#e74c3c';
+            }
+        });
+
+        // Обработка отправки формы регистрации
+        document.getElementById('register-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const username = document.getElementById('reg-username').value.trim();
+            const password = document.getElementById('reg-password').value;
+            const confirm = document.getElementById('reg-confirm').value;
+            const role = document.getElementById('reg-role').value;
+            if (username.length < 3) {
+                showNotification('Логин должен быть от 3 символов', 'error');
+                return;
+            }
+            if (password.length < 6) {
+                showNotification('Пароль должен быть от 6 символов', 'error');
+                return;
+            }
+            if (password !== confirm) {
+                showNotification('Пароли не совпадают', 'error');
+                return;
+            }
+             if (!document.getElementById('terms').checked) {
+                showNotification('Примите условия соглашения', 'error');
+                return;
+            }
+            const submitBtn = e.target.querySelector('.btn-auth');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<div class="loading-spinner"></div> Регистрация...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch('http://localhost:5000/api/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        login: username,
+                        password: password,
+                        role: role
+                    })
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    showNotification('Регистрация успешна!', 'success');
+                    try {
+                        const loginResponse = await fetch('http://localhost:5000/api/login', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                login: username,
+                                password: password
+                            })
+                        });
+                        
+                        if (loginResponse.ok) {
+                            const loginData = await loginResponse.json();
+                            localStorage.setItem('token', loginData.token);
+                            showNotification('Автоматический вход выполнен!', 'success');
+                            setTimeout(() => {
+                                window.location.href = 'index.html';
+                            }, 1500);
+                        } else {
+                            showNotification('Регистрация успешна! Войдите в систему', 'success');
+                            setTimeout(() => {
+                                window.location.href = 'login.html';
+                            }, 1500);
+                        }
+                    } catch (loginError) {
+                        console.error('Login error:', loginError);
+                        showNotification('Регистрация успешна! Войдите в систему', 'success');
+                        setTimeout(() => {
+                            window.location.href = 'login.html';
+                        }, 1500);
+                    }
+                } else {
+                    let errorMessage = 'Ошибка регистрации';
+                    
+                    try {
+                        const errorData = await response.json();
+                        if (errorData.message) {
+                            errorMessage = errorData.message;
+                        } else if (typeof errorData === 'string') {
+                            errorMessage = errorData;
+                        }
+                    } catch {
+                        try {
+                            errorMessage = await response.text();
+                        } catch {
+                            errorMessage = `Ошибка ${response.status}: ${response.statusText}`;
+                        }
+                    }
+                    
+                    showNotification(errorMessage, 'error');
+                }
+            } catch (error) {
+                console.error('Network error:', error);
+                showNotification('Ошибка соединения с сервером. Проверьте, запущен ли сервер на localhost:5000', 'error');
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+        document.querySelectorAll('.show-password').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('input');
+                const icon = this.querySelector('i');
+                
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.className = 'fas fa-eye-slash';
+                } else {
+                    input.type = 'password';
+                    icon.className = 'fas fa-eye';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

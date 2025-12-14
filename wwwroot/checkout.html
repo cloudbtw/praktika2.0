@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Shop - Оформление заказа</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-running"></i> Sneaker Shop</h1>
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+                    <a href="catalog.html"><i class="fas fa-shopping-bag"></i> Каталог</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a>
+                </div>
+                <div class="checkout-progress">
+                    <div class="progress-step active">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Корзина</div>
+                    </div>
+                    <div class="progress-step active">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Оформление</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Оплата</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Готово</div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-header">
+                <h2><i class="fas fa-credit-card"></i> Оформление заказа</h2>
+                <p>Завершите покупку, заполнив информацию ниже</p>
+            </section>
+
+            <div class="checkout-container">
+                <div class="checkout-form-section">
+                    <form id="checkout-form">
+                        <!-- Информация о доставке -->
+                        <div class="checkout-section">
+                            <h3><i class="fas fa-truck"></i> Способ доставки</h3>
+                            <div class="delivery-options">
+                                <div class="delivery-option active">
+                                    <input type="radio" name="delivery" id="delivery-courier" checked>
+                                    <label for="delivery-courier">
+                                        <div class="option-header">
+                                            <i class="fas fa-motorcycle"></i>
+                                            <h4>Курьерская доставка</h4>
+                                            <span class="option-price">300 ₽</span>
+                                        </div>
+                                        <p class="option-desc">Доставка курьером до двери. Срок: 1-2 дня</p>
+                                    </label>
+                                </div>
+                                
+                                <div class="delivery-option">
+                                    <input type="radio" name="delivery" id="delivery-pickup">
+                                    <label for="delivery-pickup">
+                                        <div class="option-header">
+                                            <i class="fas fa-store"></i>
+                                            <h4>Самовывоз</h4>
+                                            <span class="option-price">Бесплатно</span>
+                                        </div>
+                                        <p class="option-desc">Заберите заказ из нашего магазина</p>
+                                    </label>
+                                </div>
+                                
+                                <div class="delivery-option">
+                                    <input type="radio" name="delivery" id="delivery-post">
+                                    <label for="delivery-post">
+                                        <div class="option-header">
+                                            <i class="fas fa-envelope"></i>
+                                            <h4>Почта России</h4>
+                                            <span class="option-price">200 ₽</span>
+                                        </div>
+                                        <p class="option-desc">Доставка в ближайшее почтовое отделение</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Адрес доставки -->
+                        <div class="checkout-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Адрес доставки</h3>
+                            <div class="address-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="address-city">Город *</label>
+                                        <input type="text" id="address-city" placeholder="Москва" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address-street">Улица *</label>
+                                        <input type="text" id="address-street" placeholder="ул. Примерная" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="address-house">Дом *</label>
+                                        <input type="text" id="address-house" placeholder="12" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address-apartment">Квартира/Офис</label>
+                                        <input type="text" id="address-apartment" placeholder="34">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="address-comment">Комментарий для курьера</label>
+                                    <textarea id="address-comment" rows="3" placeholder="Дополнительная информация"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Контактная информация -->
+                        <div class="checkout-section">
+                            <h3><i class="fas fa-user"></i> Контактная информация</h3>
+                            <div class="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contact-name">Имя *</label>
+                                        <input type="text" id="contact-name" placeholder="Иван" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-surname">Фамилия *</label>
+                                        <input type="text" id="contact-surname" placeholder="Иванов" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contact-email">Email *</label>
+                                        <input type="email" id="contact-email" placeholder="ivan@example.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-phone">Телефон *</label>
+                                        <input type="tel" id="contact-phone" placeholder="+7 (999) 123-45-67" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Способ оплаты -->
+                        <div class="checkout-section">
+                            <h3><i class="fas fa-credit-card"></i> Способ оплаты</h3>
+                            <div class="payment-options">
+                                <div class="payment-option active">
+                                    <input type="radio" name="payment" id="payment-card" checked>
+                                    <label for="payment-card">
+                                        <div class="option-header">
+                                            <i class="fas fa-credit-card"></i>
+                                            <h4>Банковская карта</h4>
+                                        </div>
+                                        <p class="option-desc">Оплата онлайн банковской картой</p>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" id="payment-cash">
+                                    <label for="payment-cash">
+                                        <div class="option-header">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                            <h4>Наличными при получении</h4>
+                                        </div>
+                                        <p class="option-desc">Оплата наличными курьеру или в пункте выдачи</p>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" id="payment-sbp">
+                                    <label for="payment-sbp">
+                                        <div class="option-header">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <h4>СБП</h4>
+                                        </div>
+                                        <p class="option-desc">Оплата через Систему быстрых платежей</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Комментарий к заказу -->
+                        <div class="checkout-section">
+                            <h3><i class="fas fa-comment"></i> Комментарий к заказу</h3>
+                            <div class="form-group">
+                                <textarea id="order-comment" rows="4" placeholder="Ваши пожелания по заказу..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Соглашения -->
+                        <div class="checkout-agreements">
+                            <div class="form-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="agreement-terms" required>
+                                    <span>Я согласен с <a href="#">условиями продажи</a> и <a href="#">правилами возврата</a></span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="agreement-privacy" required>
+                                    <span>Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="agreement-subscribe" checked>
+                                    <span>Получать новости и специальные предложения</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="checkout-summary">
+                    <div class="summary-card">
+                        <h3><i class="fas fa-receipt"></i> Ваш заказ</h3>
+                        
+                        <div class="order-items" id="checkout-items">
+                            <!-- Товары загружаются через JS -->
+                            <div class="loading-items">
+                                <div class="loading-spinner"></div>
+                                <p>Загрузка товаров...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Товары</span>
+                                <span id="summary-subtotal">0 ₽</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Доставка</span>
+                                <span id="summary-delivery">0 ₽</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Скидка</span>
+                                <span class="discount">-<span id="summary-discount">0</span> ₽</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Итого к оплате</span>
+                                <span id="summary-total">0 ₽</span>
+                            </div>
+                        </div>
+                        
+                        <div class="promo-section">
+                            <div class="promo-input">
+                                <input type="text" id="checkout-promo" placeholder="Промокод">
+                                <button type="button" onclick="applyCheckoutPromo()" class="btn btn-small">
+                                    Применить
+                                </button>
+                            </div>
+                            <div class="promo-hint">
+                                Попробуйте: <strong>WELCOME10</strong> для скидки 10%
+                            </div>
+                        </div>
+                        
+                        <button type="button" onclick="placeOrder()" class="btn btn-checkout">
+                            <i class="fas fa-lock"></i> Оформить заказ
+                        </button>
+                        
+                        <div class="secure-info">
+                            <p><i class="fas fa-shield-alt"></i> Безопасная оплата. Ваши данные защищены</p>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-mir"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="support-info">
+                            <p><i class="fas fa-headset"></i> Нужна помощь? Звоните: 8-800-123-45-67</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Гарантии</h4>
+                    <p><i class="fas fa-shield-alt"></i> Безопасность платежей</p>
+                    <p><i class="fas fa-lock"></i> SSL шифрование</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <p><i class="fas fa-clock"></i> Круглосуточная поддержка</p>
+                    <p><i class="fas fa-envelope"></i> support@sneakershop.ru</p>
+                </div>
+            </div>
+            <p class="copyright">© 2024 Sneaker Shop. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <!-- Модальное окно успешного оформления -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content modal-sm text-center">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Заказ оформлен!</h3>
+            <p>Ваш заказ успешно оформлен. Номер заказа: <strong id="order-number">000</strong></p>
+            <p>Мы отправили подтверждение на вашу почту</p>
+            <div class="modal-actions">
+                <button onclick="viewOrder()" class="btn">
+                    <i class="fas fa-eye"></i> Посмотреть заказ
+                </button>
+                <button onclick="continueShopping()" class="btn btn-secondary">
+                    <i class="fas fa-shopping-bag"></i> Продолжить покупки
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification" style="display:none"></div>
+
+    <script src="app.js"></script>
+    <script>
+        let cartItems = [];
+        let sneakersMap = new Map();
+        let discount = 0;
+        let deliveryCost = 300;
+
+        // Загрузка товаров для оформления
+        async function loadCheckoutItems() {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            try {
+                const cartResponse = await fetch('http://localhost:5000/api/cart', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+
+                if (cartResponse.ok) {
+                    cartItems = await cartResponse.json();
+                    
+                    if (cartItems.length === 0) {
+                        showNotification('Корзина пуста', 'error');
+                        setTimeout(() => window.location.href = 'cart.html', 2000);
+                        return;
+                    }
+
+                    const sneakerIds = cartItems.map(item => item.sneakerId);
+                    const sneakersResponse = await fetch('http://localhost:5000/api/sneakers');
+                    
+                    if (sneakersResponse.ok) {
+                        const allSneakers = await sneakersResponse.json();
+                        allSneakers.forEach(s => sneakersMap.set(s.id, s));
+                        
+                        displayCheckoutItems();
+                        updateCheckoutSummary();
+                    }
+                } else {
+                    window.location.href = 'login.html';
+                }
+            } catch (error) {
+                console.error('Ошибка загрузки товаров:', error);
+            }
+        }
+
+        // Отображение товаров в оформлении
+        function displayCheckoutItems() {
+            const container = document.getElementById('checkout-items');
+            container.innerHTML = '';
+            
+            cartItems.forEach(item => {
+                const sneaker = sneakersMap.get(item.sneakerId);
+                if (!sneaker) return;
+
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'checkout-item';
+                itemDiv.innerHTML = `
+                    <div class="checkout-item-image">
+                        <div class="color-circle" style="background-color: ${getColorHex(sneaker.color)}"></div>
+                    </div>
+                    <div class="checkout-item-details">
+                        <h4>${sneaker.name}</h4>
+                        <p>Размер: ${sneaker.size} | Цвет: ${sneaker.color}</p>
+                        <p>Количество: ${item.qty}</p>
+                    </div>
+                    <div class="checkout-item-price">
+                        ${(sneaker.price * item.qty).toFixed(2)} ₽
+                    </div>
+                `;
+                container.appendChild(itemDiv);
+            });
+        }
+
+        // Обновление итоговой суммы
+        function updateCheckoutSummary() {
+            let subtotal = 0;
+            let itemsCount = 0;
+            let freeDelivery = true;
+            
+            cartItems.forEach(item => {
+                const sneaker = sneakersMap.get(item.sneakerId);
+                if (sneaker) {
+                    subtotal += sneaker.price * item.qty;
+                    itemsCount += item.qty;
+                    if (!sneaker.delivery) freeDelivery = false;
+                }
+            });
+            
+            // Проверяем выбранный способ доставки
+            const deliveryOption = document.querySelector('input[name="delivery"]:checked');
+            let delivery = 0;
+            
+            if (deliveryOption.id === 'delivery-courier') {
+                delivery = freeDelivery ? 0 : deliveryCost;
+            } else if (deliveryOption.id === 'delivery-pickup') {
+                delivery = 0;
+            } else if (deliveryOption.id === 'delivery-post') {
+                delivery = 200;
+            }
+            
+            const total = subtotal + delivery - discount;
+            
+            document.getElementById('summary-subtotal').textContent = subtotal.toFixed(2) + ' ₽';
+            document.getElementById('summary-delivery').textContent = delivery === 0 ? 'Бесплатно' : delivery + ' ₽';
+            document.getElementById('summary-discount').textContent = discount.toFixed(2);
+            document.getElementById('summary-total').textContent = total.toFixed(2) + ' ₽';
+        }
+
+        // Применение промокода
+        function applyCheckoutPromo() {
+            const promo = document.getElementById('checkout-promo').value;
+            
+            if (promo === 'WELCOME10') {
+                discount = cartItems.reduce((sum, item) => {
+                    const sneaker = sneakersMap.get(item.sneakerId);
+                    return sum + (sneaker.price * item.qty * 0.1);
+                }, 0);
+                
+                showNotification('Промокод успешно применен! Скидка 10%', 'success');
+                updateCheckoutSummary();
+            } else if (promo) {
+                showNotification('Промокод недействителен', 'error');
+            }
+        }
+
+        // Оформление заказа
+        async function placeOrder() {
+            const token = localStorage.getItem('token');
+            
+            // Валидация формы
+            const city = document.getElementById('address-city').value;
+            const street = document.getElementById('address-street').value;
+            const house = document.getElementById('address-house').value;
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const phone = document.getElementById('contact-phone').value;
+            
+            if (!city || !street || !house || !name || !email || !phone) {
+                showNotification('Заполните все обязательные поля', 'error');
+                return;
+            }
+            
+            if (!document.getElementById('agreement-terms').checked || 
+                !document.getElementById('agreement-privacy').checked) {
+                showNotification('Примите условия соглашения', 'error');
+                return;
+            }
+            
+            // Формируем адрес
+            const apartment = document.getElementById('address-apartment').value;
+            const address = `${city}, ${street}, д. ${house}${apartment ? ', кв. ' + apartment : ''}`;
+            
+            const btn = document.querySelector('.btn-checkout');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Оформление...';
+            btn.disabled = true;
+            
+            try {
+                const response = await fetch('http://localhost:5000/api/checkout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ address })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    showSuccessModal(data.orderId, data.total);
+                } else {
+                    const error = await response.text();
+                    showNotification(error || 'Ошибка оформления заказа', 'error');
+                }
+            } catch (error) {
+                console.error('Ошибка оформления:', error);
+                showNotification('Ошибка соединения', 'error');
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        // Показать модальное окно успеха
+        function showSuccessModal(orderId, total) {
+            document.getElementById('order-number').textContent = orderId;
+            document.getElementById('success-modal').style.display = 'block';
+            
+            // Очищаем корзину в localStorage
+            updateCartCount();
+        }
+
+        // Просмотр заказа
+        function viewOrder() {
+            window.location.href = 'orders.html';
+        }
+
+        // Продолжить покупки
+        function continueShopping() {
+            window.location.href = 'catalog.html';
+        }
+
+        // Получение цвета
+        function getColorHex(color) {
+            const colors = {
+                'White': '#ffffff', 'Black': '#000000', 'Red': '#e74c3c',
+                'Blue': '#3498db', 'Green': '#2ecc71', 'Grey': '#95a5a6',
+                'Brown': '#a0522d', 'Beige': '#f5deb3', 'Yellow': '#f1c40f',
+                'Orange': '#e67e22', 'Navy': '#2c3e50', 'Silver': '#bdc3c7',
+                'Maroon': '#800000'
+            };
+            return colors[color] || '#3498db';
+        }
+
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCheckoutItems();
+            checkAuth();
+            
+            // Обработчики для опций доставки
+            document.querySelectorAll('input[name="delivery"]').forEach(radio => {
+                radio.addEventListener('change', updateCheckoutSummary);
+            });
+            
+            // Автозаполнение контактной информации из профиля
+            const savedName = localStorage.getItem('profile_name');
+            const savedSurname = localStorage.getItem('profile_surname');
+            const savedEmail = localStorage.getItem('profile_email');
+            const savedPhone = localStorage.getItem('profile_phone');
+            
+            if (savedName) document.getElementById('contact-name').value = savedName;
+            if (savedSurname) document.getElementById('contact-surname').value = savedSurname;
+            if (savedEmail) document.getElementById('contact-email').value = savedEmail;
+            if (savedPhone) document.getElementById('contact-phone').value = savedPhone;
+            
+            // Обработчики для выбора опций
+            document.querySelectorAll('.delivery-option, .payment-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const input = this.querySelector('input');
+                    if (input) {
+                        input.checked = true;
+                        
+                        // Обновляем визуальное состояние
+                        this.parentElement.querySelectorAll('.delivery-option, .payment-option').forEach(opt => {
+                            opt.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        
+                        if (input.name === 'delivery') {
+                            updateCheckoutSummary();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

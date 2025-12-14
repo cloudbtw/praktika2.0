@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Shop - Каталог</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-running"></i> Sneaker Shop</h1>
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+                    <a href="catalog.html" class="active"><i class="fas fa-shopping-bag"></i> Каталог</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span id="cart-count" class="badge"></span></a>
+                    <a href="orders.html"><i class="fas fa-receipt"></i> Заказы</a>
+                    <a href="admin.html" id="admin-link" style="display:none"><i class="fas fa-user-shield"></i> Админка</a>
+                </div>
+                <div class="auth-buttons">
+                    <div id="user-info" class="user-info"></div>
+                    <button id="logout-btn" class="btn btn-secondary" style="display:none">
+                        <i class="fas fa-sign-out-alt"></i> Выйти
+                    </button>
+                    <button id="login-btn" class="btn">
+                        <i class="fas fa-sign-in-alt"></i> Войти
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-header">
+                <h2><i class="fas fa-sneakers"></i> Каталог кроссовок</h2>
+                <p>Найдите идеальную пару среди наших моделей</p>
+            </section>
+
+            <section class="filters">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="search-input"><i class="fas fa-search"></i> Поиск</label>
+                        <input type="text" id="search-input" placeholder="Введите название модели...">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="size-filter"><i class="fas fa-ruler"></i> Размер</label>
+                        <select id="size-filter">
+                            <option value="">Все размеры</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="color-filter"><i class="fas fa-palette"></i> Цвет</label>
+                        <select id="color-filter">
+                            <option value="">Все цвета</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort-filter"><i class="fas fa-sort"></i> Сортировка</label>
+                        <select id="sort-filter">
+                            <option value="">По умолчанию</option>
+                            <option value="name">По названию (А-Я)</option>
+                            <option value="price">По цене (возр.)</option>
+                            <option value="price_desc">По цене (убыв.)</option>
+                            <option value="stock">По наличию</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-buttons">
+                        <button onclick="loadSneakers()" class="btn">
+                            <i class="fas fa-filter"></i> Применить
+                        </button>
+                        <button onclick="resetFilters()" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Сбросить
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="catalog-header">
+                <h3 id="results-count">Загрузка...</h3>
+                <div class="view-controls">
+                    <button id="grid-view" class="view-btn active"><i class="fas fa-th-large"></i></button>
+                    <button id="list-view" class="view-btn"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+
+            <section id="sneakers-list" class="sneakers-grid">
+                <div class="loading-placeholder">
+                    <div class="loading-spinner"></div>
+                    <p>Загрузка каталога...</p>
+                </div>
+            </section>
+
+            <div id="sneaker-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="modal-header">
+                        <h3 id="modal-title"></h3>
+                        <div id="modal-rating" class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="modal-image">
+                            <img id="modal-image" src="https://via.placeholder.com/400x300" alt="Sneaker">
+                        </div>
+                        <div class="modal-details" id="modal-details">
+                        </div>
+                    </div>
+                    
+                    <div id="reviews-section">
+                        <h4><i class="fas fa-comments"></i> Отзывы покупателей</h4>
+                        <div id="reviews-list" class="reviews-container">
+                            <p class="no-reviews">Загрузка отзывов...</p>
+                        </div>
+                        
+                        <div class="add-review">
+                            <h5><i class="fas fa-edit"></i> Добавить отзыв</h5>
+                            <textarea id="review-text" placeholder="Поделитесь вашим мнением об этой модели..." rows="4"></textarea>
+                            <button onclick="submitReview()" class="btn">
+                                <i class="fas fa-paper-plane"></i> Отправить отзыв
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Категории</h4>
+                    <a href="#">Беговые</a>
+                    <a href="#">Повседневные</a>
+                    <a href="#">Баскетбольные</a>
+                    <a href="#">Теннисные</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Помощь</h4>
+                    <a href="#">Размерная сетка</a>
+                    <a href="#">Доставка и оплата</a>
+                    <a href="#">Возврат</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <p>Есть вопросы? Мы поможем!</p>
+                    <p><i class="fas fa-phone"></i> 8-800-123-45-67</p>
+                    <p>Ежедневно с 9:00 до 21:00</p>
+                </div>
+            </div>
+            <p class="copyright">© 2024 Sneaker Shop. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification" style="display:none"></div>
+
+    <script src="app.js"></script>
+    <script>
+        let currentSneakerId = null;
+        let currentView = 'grid';
+        let filters = {
+            q: '',
+            size: '',
+            color: '',
+            sort: ''
+        };
+
+        async function loadFilters() {
+            try {
+                const response = await fetch('http://localhost:5000/api/sneakers/filters');
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    const sizeSelect = document.getElementById('size-filter');
+                    data.sizes.forEach(size => {
+                        const option = document.createElement('option');
+                        option.value = size;
+                        option.textContent = `Размер ${size}`;
+                        sizeSelect.appendChild(option);
+                    });
+                    
+                    const colorSelect = document.getElementById('color-filter');
+                    data.colors.forEach(color => {
+                        const option = document.createElement('option');
+                        option.value = color;
+                        option.textContent = color;
+                        colorSelect.appendChild(option);
+                    });
+                }
+            } catch (error) {
+                console.error('Ошибка загрузки фильтров:', error);
+            }
+        }
+
+        async function loadSneakers() {
+            const search = document.getElementById('search-input').value;
+            const size = document.getElementById('size-filter').value;
+            const color = document.getElementById('color-filter').value;
+            const sort = document.getElementById('sort-filter').value;
+            
+            filters = { q: search, size, color, sort };
+            
+            let query = [];
+            if (filters.q) query.push(`q=${encodeURIComponent(filters.q)}`);
+            if (filters.size) query.push(`size=${filters.size}`);
+            if (filters.color) query.push(`color=${encodeURIComponent(filters.color)}`);
+            if (filters.sort) query.push(`sort=${filters.sort}`);
+            
+            const url = `http://localhost:5000/api/sneakers${query.length ? '?' + query.join('&') : ''}`;
+            
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const sneakers = await response.json();
+                    displaySneakers(sneakers);
+                }
+            } catch (error) {
+                console.error('Ошибка загрузки кроссовок:', error);
+            }
+        }
+
+        function displaySneakers(sneakers) {
+            const container = document.getElementById('sneakers-list');
+            container.innerHTML = '';
+            
+            document.getElementById('results-count').textContent = `Найдено: ${sneakers.length} товаров`;
+            
+            if (sneakers.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search fa-3x"></i>
+                        <h3>Ничего не найдено</h3>
+                        <p>Попробуйте изменить параметры поиска</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const viewClass = currentView === 'grid' ? 'grid-view' : 'list-view';
+            container.className = `sneakers-${viewClass}`;
+            
+            sneakers.forEach(sneaker => {
+                const card = document.createElement('div');
+                card.className = `sneaker-card ${currentView}`;
+                card.innerHTML = `
+                    <div class="sneaker-image">
+                        <div class="color-badge" style="background-color: ${getColorHex(sneaker.color)}"></div>
+                        <div class="size-badge">${sneaker.size}</div>
+                        ${sneaker.stock === 0 ? '<div class="sold-out">Распродано</div>' : ''}
+                    </div>
+                    <div class="sneaker-info">
+                        <h4>${sneaker.name}</h4>
+                        <p class="sneaker-color"><i class="fas fa-palette"></i> ${sneaker.color}</p>
+                        <p class="sneaker-stock ${sneaker.stock > 5 ? 'in-stock' : 'low-stock'}">
+                            <i class="fas fa-box"></i> ${sneaker.stock} шт.
+                        </p>
+                        ${sneaker.delivery ? '<p class="delivery-badge"><i class="fas fa-shipping-fast"></i> Бесплатная доставка</p>' : ''}
+                        <div class="price-section">
+                            <span class="price">${sneaker.price.toFixed(2)}₽</span>
+                            <div class="card-actions">
+                                ${sneaker.stock > 0 ? `
+                                    <button onclick="addToCart(${sneaker.id})" class="btn btn-small">
+                                        <i class="fas fa-cart-plus"></i> В корзину
+                                    </button>
+                                ` : ''}
+                                <button onclick="showSneakerDetails(${sneaker.id})" class="btn btn-small btn-secondary">
+                                    <i class="fas fa-eye"></i> Подробнее
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        async function showSneakerDetails(id) {
+            currentSneakerId = id;
+            try {
+                const response = await fetch(`http://localhost:5000/api/sneakers/${id}`);
+                if (response.ok) {
+                    const sneaker = await response.json();
+                    
+                    document.getElementById('modal-title').textContent = sneaker.name;
+
+                    document.getElementById('modal-image').src = 
+                        `https://via.placeholder.com/400x300/${getColorHex(sneaker.color).substring(1)}/fff?text=${sneaker.name}`;
+                    
+                    const details = document.getElementById('modal-details');
+                    details.innerHTML = `
+                        <div class="detail-row">
+                            <span class="detail-label"><i class="fas fa-ruler"></i> Размер:</span>
+                            <span class="detail-value">${sneaker.size}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label"><i class="fas fa-palette"></i> Цвет:</span>
+                            <span class="detail-value">${sneaker.color}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label"><i class="fas fa-box"></i> Наличие:</span>
+                            <span class="detail-value ${sneaker.stock > 5 ? 'in-stock' : 'low-stock'}">${sneaker.stock} шт.</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label"><i class="fas fa-tag"></i> Цена:</span>
+                            <span class="detail-value price-large">${sneaker.price.toFixed(2)}₽</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label"><i class="fas fa-shipping-fast"></i> Доставка:</span>
+                            <span class="detail-value">${sneaker.delivery ? '✅ Бесплатная доставка' : '⚠️ Платная доставка'}</span>
+                        </div>
+                        ${sneaker.stock > 0 ? `
+                            <div class="add-to-cart-modal">
+                                <div class="qty-control">
+                                    <button onclick="changeQty(-1)" class="qty-btn"><i class="fas fa-minus"></i></button>
+                                    <input type="number" id="qty-input" value="1" min="1" max="${sneaker.stock}" readonly>
+                                    <button onclick="changeQty(1)" class="qty-btn"><i class="fas fa-plus"></i></button>
+                                </div>
+                                <button onclick="addToCart(${sneaker.id}, true)" class="btn">
+                                    <i class="fas fa-cart-plus"></i> Добавить в корзину
+                                </button>
+                            </div>
+                        ` : '<p class="out-of-stock-message">Товар временно отсутствует</p>'}
+                    `;
+                    
+                    await loadReviews(id);
+                    document.getElementById('sneaker-modal').style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Ошибка загрузки деталей:', error);
+                showNotification('Ошибка загрузки товара', 'error');
+            }
+        }
+
+        function getColorHex(color) {
+            const colors = {
+                'White': '#ffffff',
+                'Black': '#000000',
+                'Red': '#e74c3c',
+                'Blue': '#3498db',
+                'Green': '#2ecc71',
+                'Grey': '#95a5a6',
+                'Brown': '#a0522d',
+                'Beige': '#f5deb3',
+                'Yellow': '#f1c40f',
+                'Orange': '#e67e22',
+                'Navy': '#2c3e50',
+                'Silver': '#bdc3c7',
+                'Maroon': '#800000'
+            };
+            return colors[color] || '#3498db';
+        }
+
+        function changeQty(delta) {
+            const input = document.getElementById('qty-input');
+            let value = parseInt(input.value) + delta;
+            const max = parseInt(input.max);
+            const min = parseInt(input.min);
+            
+            if (value > max) value = max;
+            if (value < min) value = min;
+            
+            input.value = value;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFilters();
+            loadSneakers();
+            checkAuth();
+            updateCartCount();
+
+            document.getElementById('grid-view').addEventListener('click', () => {
+                currentView = 'grid';
+                document.getElementById('grid-view').classList.add('active');
+                document.getElementById('list-view').classList.remove('active');
+                loadSneakers();
+            });
+            
+            document.getElementById('list-view').addEventListener('click', () => {
+                currentView = 'list';
+                document.getElementById('list-view').classList.add('active');
+                document.getElementById('grid-view').classList.remove('active');
+                loadSneakers();
+            });
+
+            document.querySelector('.close').onclick = () => {
+                document.getElementById('sneaker-modal').style.display = 'none';
+            };
+            
+            window.onclick = (event) => {
+                const modal = document.getElementById('sneaker-modal');
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        });
+    </script>
+</body>
+</html>

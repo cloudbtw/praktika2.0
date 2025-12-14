@@ -1,0 +1,1052 @@
+{
+  "Version": 1,
+  "Hash": "0KPDoHhjoWVB303xlkPNBUNkV3GI9LjbxuxEmTfQ4a8=",
+  "Source": "WebApplication10",
+  "BasePath": "_content/WebApplication10",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApplication10\\wwwroot",
+      "Source": "WebApplication10",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\app.js",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "app#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sn7u1pqo10",
+      "Integrity": "uDh4JwLWRhbKz3NK7fjVxmnjicCIWRRSqxhYARVVcI4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.js"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\cart.html",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "cart#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fhh5pvzy6f",
+      "Integrity": "wyxU6TCmtyMy5EGWrJnrcNAfSeezF8CVhjl0EZ5XDmo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cart.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\catalog.html",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "catalog#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aw52ekqi60",
+      "Integrity": "prfUAKuJry3tce9HcuFF2Mb0fHzSqYwc0SGFvQ01XCo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\catalog.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\checkout.html",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "checkout#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yyrqwngs33",
+      "Integrity": "GuwqBNUSXixHmZvfZ/vwh/F4l31xWn37vHMFtstyI2g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\checkout.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\index.html",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5iwjlctoi2",
+      "Integrity": "TeAMdCs7yh8t0dAH56Vy6QXMiBUJyb9dyCVKZTGqbfw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\login.html",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "login#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mgowwgsrle",
+      "Integrity": "1iPppVwdMMtu1A6Hj9rtftiZzYFAYQB0sHxFZpoiwmw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\login.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\product.html",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "product#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s038frx1e0",
+      "Integrity": "tDNtHzEJ/WuWfhE6k0wAb8y1nGloTS14UlgoOyq/v1M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\product.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\profile.html",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "profile#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "stahi7qt59",
+      "Integrity": "EP+BOydbxSt1j7BNBVjMdDljOShB0FBMPEljm9VLoG0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\register.html",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "register#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u5ykegaozx",
+      "Integrity": "8pejAZ1nWBY/6/zQh65X0CUn3MUKJ2DYn3ZnMAlPQhE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\register.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\style.css",
+      "SourceId": "WebApplication10",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\",
+      "BasePath": "_content/WebApplication10",
+      "RelativePath": "style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8lihtkofkm",
+      "Integrity": "XMWTs2pnPQdADRKdave2SkZvaYqtlTGlhK9v4SHwngg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.js",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uDh4JwLWRhbKz3NK7fjVxmnjicCIWRRSqxhYARVVcI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 19:59:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uDh4JwLWRhbKz3NK7fjVxmnjicCIWRRSqxhYARVVcI4="
+        }
+      ]
+    },
+    {
+      "Route": "app.sn7u1pqo10.js",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uDh4JwLWRhbKz3NK7fjVxmnjicCIWRRSqxhYARVVcI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 19:59:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sn7u1pqo10"
+        },
+        {
+          "Name": "label",
+          "Value": "app.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uDh4JwLWRhbKz3NK7fjVxmnjicCIWRRSqxhYARVVcI4="
+        }
+      ]
+    },
+    {
+      "Route": "cart.fhh5pvzy6f.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\cart.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wyxU6TCmtyMy5EGWrJnrcNAfSeezF8CVhjl0EZ5XDmo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:13:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fhh5pvzy6f"
+        },
+        {
+          "Name": "label",
+          "Value": "cart.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wyxU6TCmtyMy5EGWrJnrcNAfSeezF8CVhjl0EZ5XDmo="
+        }
+      ]
+    },
+    {
+      "Route": "cart.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\cart.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wyxU6TCmtyMy5EGWrJnrcNAfSeezF8CVhjl0EZ5XDmo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:13:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wyxU6TCmtyMy5EGWrJnrcNAfSeezF8CVhjl0EZ5XDmo="
+        }
+      ]
+    },
+    {
+      "Route": "catalog.aw52ekqi60.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\catalog.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"prfUAKuJry3tce9HcuFF2Mb0fHzSqYwc0SGFvQ01XCo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 19:58:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aw52ekqi60"
+        },
+        {
+          "Name": "label",
+          "Value": "catalog.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-prfUAKuJry3tce9HcuFF2Mb0fHzSqYwc0SGFvQ01XCo="
+        }
+      ]
+    },
+    {
+      "Route": "catalog.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\catalog.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"prfUAKuJry3tce9HcuFF2Mb0fHzSqYwc0SGFvQ01XCo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 19:58:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-prfUAKuJry3tce9HcuFF2Mb0fHzSqYwc0SGFvQ01XCo="
+        }
+      ]
+    },
+    {
+      "Route": "checkout.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\checkout.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31164"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GuwqBNUSXixHmZvfZ/vwh/F4l31xWn37vHMFtstyI2g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:17:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GuwqBNUSXixHmZvfZ/vwh/F4l31xWn37vHMFtstyI2g="
+        }
+      ]
+    },
+    {
+      "Route": "checkout.yyrqwngs33.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\checkout.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31164"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GuwqBNUSXixHmZvfZ/vwh/F4l31xWn37vHMFtstyI2g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:17:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yyrqwngs33"
+        },
+        {
+          "Name": "label",
+          "Value": "checkout.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GuwqBNUSXixHmZvfZ/vwh/F4l31xWn37vHMFtstyI2g="
+        }
+      ]
+    },
+    {
+      "Route": "index.5iwjlctoi2.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10055"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TeAMdCs7yh8t0dAH56Vy6QXMiBUJyb9dyCVKZTGqbfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 19:55:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5iwjlctoi2"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TeAMdCs7yh8t0dAH56Vy6QXMiBUJyb9dyCVKZTGqbfw="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10055"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TeAMdCs7yh8t0dAH56Vy6QXMiBUJyb9dyCVKZTGqbfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 19:55:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TeAMdCs7yh8t0dAH56Vy6QXMiBUJyb9dyCVKZTGqbfw="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1iPppVwdMMtu1A6Hj9rtftiZzYFAYQB0sHxFZpoiwmw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:01:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1iPppVwdMMtu1A6Hj9rtftiZzYFAYQB0sHxFZpoiwmw="
+        }
+      ]
+    },
+    {
+      "Route": "login.mgowwgsrle.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1iPppVwdMMtu1A6Hj9rtftiZzYFAYQB0sHxFZpoiwmw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:01:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mgowwgsrle"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1iPppVwdMMtu1A6Hj9rtftiZzYFAYQB0sHxFZpoiwmw="
+        }
+      ]
+    },
+    {
+      "Route": "product.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\product.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39844"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tDNtHzEJ/WuWfhE6k0wAb8y1nGloTS14UlgoOyq/v1M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:15:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tDNtHzEJ/WuWfhE6k0wAb8y1nGloTS14UlgoOyq/v1M="
+        }
+      ]
+    },
+    {
+      "Route": "product.s038frx1e0.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\product.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39844"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tDNtHzEJ/WuWfhE6k0wAb8y1nGloTS14UlgoOyq/v1M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:15:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s038frx1e0"
+        },
+        {
+          "Name": "label",
+          "Value": "product.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tDNtHzEJ/WuWfhE6k0wAb8y1nGloTS14UlgoOyq/v1M="
+        }
+      ]
+    },
+    {
+      "Route": "profile.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\profile.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EP+BOydbxSt1j7BNBVjMdDljOShB0FBMPEljm9VLoG0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:15:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EP+BOydbxSt1j7BNBVjMdDljOShB0FBMPEljm9VLoG0="
+        }
+      ]
+    },
+    {
+      "Route": "profile.stahi7qt59.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\profile.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EP+BOydbxSt1j7BNBVjMdDljOShB0FBMPEljm9VLoG0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:15:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "stahi7qt59"
+        },
+        {
+          "Name": "label",
+          "Value": "profile.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EP+BOydbxSt1j7BNBVjMdDljOShB0FBMPEljm9VLoG0="
+        }
+      ]
+    },
+    {
+      "Route": "register.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\register.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8pejAZ1nWBY/6/zQh65X0CUn3MUKJ2DYn3ZnMAlPQhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:29:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8pejAZ1nWBY/6/zQh65X0CUn3MUKJ2DYn3ZnMAlPQhE="
+        }
+      ]
+    },
+    {
+      "Route": "register.u5ykegaozx.html",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\register.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8pejAZ1nWBY/6/zQh65X0CUn3MUKJ2DYn3ZnMAlPQhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 20:29:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u5ykegaozx"
+        },
+        {
+          "Name": "label",
+          "Value": "register.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8pejAZ1nWBY/6/zQh65X0CUn3MUKJ2DYn3ZnMAlPQhE="
+        }
+      ]
+    },
+    {
+      "Route": "style.8lihtkofkm.css",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14125"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XMWTs2pnPQdADRKdave2SkZvaYqtlTGlhK9v4SHwngg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 19:54:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8lihtkofkm"
+        },
+        {
+          "Name": "label",
+          "Value": "style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XMWTs2pnPQdADRKdave2SkZvaYqtlTGlhK9v4SHwngg="
+        }
+      ]
+    },
+    {
+      "Route": "style.css",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\WebApplication10\\WebApplication10\\wwwroot\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14125"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XMWTs2pnPQdADRKdave2SkZvaYqtlTGlhK9v4SHwngg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Dec 2025 19:54:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XMWTs2pnPQdADRKdave2SkZvaYqtlTGlhK9v4SHwngg="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+wwwroot\app.js
+wwwroot\cart.html
+wwwroot\catalog.html
+wwwroot\checkout.html
+wwwroot\index.html
+wwwroot\login.html
+wwwroot\product.html
+wwwroot\profile.html
+wwwroot\register.html
+wwwroot\style.css
